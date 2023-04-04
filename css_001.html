@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 기본속성</title>
+</head>
+
+<body>
+
+    <h1>css란?</h1>
+    <p>Cascading Style Sheet의 약자로 문서를 꾸미는 구조로 사용된다.</p>
+    <h3>css종류</h3>
+    <ol>
+        <li class="list1">외부스타일 시트 - html 문서 내부에 쓰지 않고 별도의 css라는 확장자 이름을 가진 파일을 작성하고 link태그로 연결한다.<br>
+            <strong>작성법 _ link href = "스타일시트.css"</strong>
+        </li>
+
+        <li class="list2">내부스타일 시트 - html 문서 내부에 style 태그를 만들어 작성한다. ( 'head태그 내부에 작성한다' 였지만 지금은 어디에 넣어도 상관없음)</li>
+
+        <li class="list3">inline방식 - 태그에 속성 값으로 직접 작성하는 방식 (우선적용)
+            <strong>작성법 _ 태그명 style = "color(속성명) : red(속성값)"</strong>
+        </li>
+    </ol>
+
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        h1 {
+            background-color: rgb(94, 93, 93);
+            margin: 0;
+            color: #FFF;
+        }
+        p {
+            font-style: italic;
+        }
+        ol {
+            background-color: rgb(234, 255, 201);
+        }
+        li{margin-top: 15px;}
+        .list1 {
+            color: rgb(255, 169, 10);
+        }
+        .list2 {
+            color: rgb(180, 99, 255);
+        }
+        .list3 {
+            color: rgb(223, 128, 128);
+        }
+    </style>
+
+</body>
+
+</html>
