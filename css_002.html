@@ -41,17 +41,49 @@
     </ul>
     <style>
         /* 복수선택 */
-        .box001 , .box002 , .box003 , .box004 , .box005 , .box006 , .box007 , .box008
-        {width: 400px;
-        background-color: bisque;}
-        .box001 {margin-top: 200px;}
-        .box002 {margin-bottom: 50px;}
-        .box003 {margin-left: 50px;}
-        .box004 {margin-right: 200px;}
-        .box005 {padding-top: 200px;}
-        .box006 {padding-bottom: 50px;}
-        .box007 {padding-left: 50px;}
-        .box008 {padding-right: 200px;}
+        .box001,
+        .box002,
+        .box003,
+        .box004,
+        .box005,
+        .box006,
+        .box007,
+        .box008 {
+            width: 400px;
+            background-color: bisque;
+        }
+
+        .box001 {
+            margin-top: 200px;
+        }
+
+        .box002 {
+            margin-bottom: 50px;
+        }
+
+        .box003 {
+            margin-left: 50px;
+        }
+
+        .box004 {
+            margin-right: 200px;
+        }
+
+        .box005 {
+            padding-top: 200px;
+        }
+
+        .box006 {
+            padding-bottom: 50px;
+        }
+
+        .box007 {
+            padding-left: 50px;
+        }
+
+        .box008 {
+            padding-right: 200px;
+        }
     </style>
 
 
@@ -82,6 +114,7 @@
             padding: 20px;
             border: 2px black solid;
         }
+
         .border li {
             width: 100%;
             background-color: palevioletred;
@@ -89,27 +122,209 @@
             box-sizing: border-box;
             margin-bottom: 10px;
         }
-        .border001 {border-top: 5px red solid;}
-        .border002 {border-bottom: 5px yellow solid;}
-        .border003 {border-left: 7px  rebeccapurple dotted;}
-        .border004 {border-right: 5px royalblue dashed;}
-        .border005 {border-bottom: 10px darkblue double;}
-        .border006 {border: 15px salmon groove;}
-        .border007 {border: 15px paleturquoise ridge;}
-        .border008 {border: 15px plum inset;}
-        .border009 {border: 15px palegreen outset;}
+
+        .border001 {
+            border-top: 5px red solid;
+        }
+
+        .border002 {
+            border-bottom: 5px yellow solid;
+        }
+
+        .border003 {
+            border-left: 7px rebeccapurple dotted;
+        }
+
+        .border004 {
+            border-right: 5px royalblue dashed;
+        }
+
+        .border005 {
+            border-bottom: 10px darkblue double;
+        }
+
+        .border006 {
+            border: 10px salmon groove;
+        }
+
+        .border007 {
+            border: 10px paleturquoise ridge;
+        }
+
+        .border008 {
+            border: 10px plum inset;
+        }
+
+        .border009 {
+            border: 10px palegreen outset;
+        }
     </style>
 
 
-    <p>작성법 - color, width, style을 한번에 쓸 수도 있고 각자 쓸 수도 있다.(순번에 관계없음)
+    <p>작성법 - color, width, style을 한번에 쓸 수도 있고 각자 쓸 수도 있다.(순번에 관계없음)<br>
         <strong>border : red 2px solid(2px너비의 빨간색 실선)</strong>
     </p>
 
+    <h4>corner곡선 만들기 - border-radios</h4>
+    <p>원을 만들거나 둥근 사각형을 제작할 때 사용한다.<br>
+        주의사항 - 짧은 면의 50%를 초과하지 않는다.</p>
 
+    <div class="boxSet">
+        <div class="box1">둥근 사각형1</div>
+        <div class="box2">둥근 사각형2</div>
+        <div class="box3">둥근 사각형3</div>
+        <div class="box4">둥근 사각형4</div>
+        <div class="box5">둥근 사각형5</div>
+    </div>
 
+    <style>
+        /* 후손자 방식 */
+        .boxSet {
+            display: flex;
+        }
 
+        .boxSet div {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(174, 232, 255);
+            margin-right: 10px;
+            text-align: center;
+            padding-top: 85px;
+            box-sizing: border-box;
+        }
 
+        .box1 {
+            border-radius: 30px;
+        }
 
+        .box2 {
+            border-radius: 50%;
+        }
+
+        .box3 {
+            border-radius: 10px 20px 30px 40px;
+        }
+
+        .box4 {
+            border-top-right-radius: 50px;
+        }
+
+        .box5 {
+            border-radius: 15px 70px 15px 70px / 70px 15px 70px 15px
+        }
+
+        /* 자손자 방식 */
+        .boxSet>div {}
+    </style>
+
+    <h4>background(배경설정)</h4>
+    <p>배경색이나 배경이미지를 삽입할 때 사용한다.<br>
+        많은 속성들을 한번에 기재할 수도 있고 별도로 기재할 수도 있다.</p>
+
+    <ul>
+        <li><b>background-color</b>
+            <ul>
+                <li>영문이름으로 작성 : red, black, white 등</li>
+                <li>hex코드로 작성 : #ffffff, #000000, #fff(ffffff를 줄인 것임) 등<br>
+                    (반복으로 들어갈 경우 레드에서 하나 그린에서 하나 블루에서 하나씩 작성가능)</li>
+                <li>RGB수치값 작성 : RGB(00,20,50)</li>
+                <li>RGB와 투영도를 같이 작성 : RGBA(0,200,50,0.5) _ A는 알파값</li><br>
+            </ul>
+        </li>
+        <li><b>background-image</b> : url(이미지 경로 작성)</li><br>
+        <li><b>background-repeat</b> : 배경이미지 또는 컬러를 반복한다.
+            <ul>
+                <li>repeat : 가로, 세로형으로 모두 패턴처럼 깔림(ex.바닥타일)</li>
+                <li>repeat-x : 가로방향으로만 깔림(ex. 벽지)</li>
+                <li>repeat-y : 세로방향으로만 깔림</li>
+                <li>no-repeat : 반복없음</li><br>
+            </ul>
+        </li>
+        <li><b>background-size</b> : 배경이미지의 크기를 태그사이즈대비 변경하고자 할 때 사용
+            <ul>
+                <li>contain : 이미지의 비율을 유지하면서 영역을 꽉 채움</li>
+                <li>cover : 배경이미지가 짤리더라도 화면의 영역을 꽉 채움</li><br>
+            </ul>
+        </li>
+        <li><b>background-position</b> : top, center, left 등 위치를 지칭하는 단어로도 사용 가능하고 숫자와 단위로도 이동가능하다.<br>
+            왼쪽 상단(모서리)에서부터 거리가 멀어지고 앞에 수가 오른쪽으로 이동하고 다음의 수가 아래쪽으로 이동한다. ex _ 20px 60px</li><br>
+        <li><b>background-attachment</b> : fixed로 바닥에 붙이는 효과<br>
+        </li>
+    </ul>
+
+    <p>그라디언트를 활용하여 배경색 또는 패턴을 제작할 수 있다.</p>
+    <ul>
+        <li>linear-gradient(각도, 시작색깔, 마지막색깔)</li>
+        <li>radial-gradient(시작색깔, 마지막색깔)</li>
+        <li>patten : 직선 그라데이션의 수직 시작점을 % 값으로 잡아 옆에 여백을 만들어 반복시켜 적용한다.</li>
+        <li><a href="http://gradienthunt.com" target="_blank">그라디언트헌트 바로가기</a></li>
+    </ul>
+
+    <style>
+        .bg001 {
+            background-color: rgb(175, 144, 144);
+        }
+
+        .bg002 {
+            background-color: rgba(175, 144, 144, 0.5);
+        }
+
+        .bg003 {
+            background-image: url(http://hcapple.kr/theme/hcapple2022/img/main/002.jpg);
+            height: 300px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
+
+        .bg004 {
+            background-image: url(https://img.freepik.com/free-photo/beautiful-beach-and-sea_74190-6620.jpg?t=st=1680195385~exp=1680195985~hmac=6d89e1cfe90ddd2db5f8bb5eacddd0caf2ed3b82b4154a7ff979ce58cbc01a70);
+            height: 300px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left bottom;
+            background-attachment: fixed;
+        }
+        .bg005{
+            height: 1200px;
+            background-image: linear-gradient( 92.7deg,  rgba(245,212,212,1) 8.5%, rgba(252,251,224,1) 90.2% );
+        }
+        .bg005 div {
+            height: 300px;
+            border: 1px solid #000;
+            margin-top: 20px;}
+
+            .bg005 div:nth-child(1) {background: linear-gradient(0deg, #ffb3b3,#ffffff);}
+            .bg005 div:nth-child(2) {background-image: radial-gradient(#ffff4a, #ffffff);}
+            .bg005 div:nth-child(3) {background: linear-gradient(90deg, #ccc 50%, #fff 0) 0 0/55px 2px;}
+            /* 
+            background-image: linear-gradient( 108.4deg,  rgba(250,236,190,1) 4.2%, rgba(247,202,205,1) 30.7%, rgba(255,186,233,1) 53.9%, rgba(214,176,214,1) 73.9%, rgba(148,195,231,1) 90.4% );
+             */
+    </style>
+
+    <div class="bg001">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae tempora mollitia id necessitatibus aut hic soluta
+        deleniti minima inventore enim! Est rem optio modi temporibus inventore, labore pariatur voluptate commodi.
+    </div>
+    <div class="bg002">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae tempora mollitia id necessitatibus aut hic soluta
+        deleniti minima inventore enim! Est rem optio modi temporibus inventore, labore pariatur voluptate commodi.
+    </div>
+    <div class="bg003">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae tempora mollitia id necessitatibus aut hic soluta
+        deleniti minima inventore enim! Est rem optio modi temporibus inventore, labore pariatur voluptate commodi.
+    </div>
+    <div class="bg004">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae tempora mollitia id necessitatibus aut hic soluta
+        deleniti minima inventore enim! Est rem optio modi temporibus inventore, labore pariatur voluptate commodi.
+    </div>
+    <div class="bg005">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae tempora mollitia id necessitatibus aut hic soluta
+        deleniti minima inventore enim! Est rem optio modi temporibus inventore, labore pariatur voluptate commodi.
+    <div>직선형그라디언트</div>
+    <div>방사형그라디언트</div>
+    <div>그라디언트활용패턴</div>
+</div>
 
 
 </body>
