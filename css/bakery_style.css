@@ -1,0 +1,110 @@
+/* 유니코드를 html과 통일시킨다. */
+
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    box-sizing: border-box;
+    background-attachment: fixed;
+}
+
+section h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 112px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/*titleBox설정 */
+
+.titleBox {
+    height: 100vh;
+    background-color: antiquewhite;
+    background-image: url(../img/bread1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-align: center;
+    padding-top: 10vh;
+}
+
+
+/* menuBox설정 */
+.menuBox {
+    height: 100vh;
+    background-color: antiquewhite;
+    background-image: url(../img/bread2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top: 20vh;
+    padding-left: 10vh;
+}
+
+.menuBox ul {
+    margin-left: 50px;
+}
+
+.menuBox li {
+    margin-bottom: 5px;
+    padding-left: 10px;
+}
+
+.menuBox span {
+    width: 150px;
+    display: inline-block;
+}
+
+/* contactBox 설정 */
+.contactBox {
+    height: 100vh;
+    background-color: antiquewhite;
+    background-image: url(../img/cafe.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-align: center;
+    padding-top: 10vh;
+}
+
+.contactBox form {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.contactBox input {
+    width: 200px;
+    padding: 30px 20px;
+    font-size: 32px;
+    border-radius: 5px;
+    background-color: #818181;
+    border: none;
+    color: #fff;
+}
+
+.contactBox ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.contactBox li a {
+    color: #555;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+}
+
+.contactBox li a:hover {
+    opacity: 0.5;
+}
