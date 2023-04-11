@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 레이아웃</title>
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="css/style_003.css">
+</head>
+<body>
+    <h1>CSS 레이아웃</h1>
+    <p>css를 활용하여 공간을 나누듯 배치를 하기 위해 여러 속성을 사용한다.</p><br>
+    
+    <h2>가시속성</h2>
+    <p>display _ 태그가 화면에 보이는 방식을 지정한다.</p>
+    <ul class="layout001">
+        <li><b>none</b> : 화면에서 안보이며 공간도 함께 사라진다. 또한 웹 접근성으로도 확인할 수 없다.</li>
+        <li><b>inline</b> : 특별한 공간의 값을 가지고 있지 않다. width, height 등의 값을 지정할 수 없다.<br>
+                    margin, padding의 경우 요소를 기준으로 하기 때문에 좌우는 적용이 되나, 상하는 적용이 되지 않는다.</li>
+        <li><b>inline-block</b> : inline과 block의 중간 역할이며 두 속성의 모든 성질을 가지고 있다.</li>
+        <li><b>block</b> : 가로 값 화면 기준 100%로 적용(자동 줄바꿈 기능이 있음)</li>
+    </ul>
+
+    <div class="box001">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, nemo maxime. Atque dolorum quibusdam facilis in nulla nesciunt aspernatur nam blanditiis culpa quisquam, corrupti iusto eligendi corporis autem est quis.
+        <span>inline</span>
+        <span>inline-block</span>
+        <span>block</span>
+    </div>
+    <br>
+
+    <h2>float 속성</h2>
+    <p>자동 줄바꿈의 성질이 있는 블럭을 한 줄에 2개 이상의 요소를 배치하고자 할 때 사용한다.<br>
+        사전적 의미로 '물이나 공중에 뜨다' 라는 의미로 블럭 요소를 강제로 띄워서 화면에 좌우로 배치한다.</p>
+    <ul class="layout002">
+        <li><b>left</b> : 왼쪽에 요소를 띄워서 나열한다.</li>
+        <li><b>right</b> : 오른쪽에 요소를 띄워서 나열한다.</li>
+    </ul>
+
+    <ul class="box002">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+    </ul><br>
+
+    <h2>flex 속성</h2>
+    <p>태그를 수평, 수직으로 자유롭고 유연하게 변동할 수 있는 기능이다.</p>
+    <ul>
+        <li><b>container</b> : 부모요소를 부르는 명칭으로 사용한다.</li>
+        <li><b>items</b> : 자식요소를 부르는 명칭이다.</li>
+    </ul><br>
+
+    <p>Container 속성 - <b>display</b>, flex-flow(묶음기능), flex-derection(수평/수직을 표현), <b>justify-content</b>(아이템 수평 정렬 시 사용), <b>aline-item</b>(아이템 수직 정렬 시 사용)</p>
+    <p>items 속성 - flex, grow(증가너비), shrink(감소너비), basis(크기배분), align-self(각자조정)</p>
+    <p>자손자에만 오롯이 적용되며 후손자에는 적용이 되지 않는다.</p>
+
+    <ul class="box003">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+    </ul><br>
+
+</body>
+</html>

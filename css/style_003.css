@@ -1,0 +1,93 @@
+/* 유니코드 설정 */
+@charset 'utf-8';
+
+    /* 전체설정 */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    ul , ol {
+            list-style: none;
+            }
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    /* 가시속성 예제 */
+    .layout001 {
+                border: 1px solid;
+                margin: 10px;
+                padding: 10px;
+                }
+        /* padding은 네모칸 안에 글자들과 공간을 띄움 / margin은 벽과 공간을 띄움 */
+    .layout001 li {
+                border-bottom: 5px solid rgb(243, 173, 243);
+                margin-bottom: 5px;
+                background-image: linear-gradient(90deg, #bbbbbb 50%, #ff74e8 0);
+                background-size: 8px;
+                background-repeat: no-repeat;
+                padding-left: 10px;
+                }
+
+    .box001 {
+            background-color: bisque;
+            padding: 40px;
+            }
+    .box001 span {
+                border: 2px solid #000;
+                padding: 20px;
+            }
+    /* span 띄어쓰기 한칸으로 인식해 공간이 띄어져 있음 즉, 띄어쓰기 안하면 상자끼리 붙음 */
+    .box001 span:nth-child(1) {display: inline;}
+    .box001 span:nth-child(2) {display: inline-block;}
+    .box001 span:nth-child(3) {display: block;}
+
+    /* float 속성 */
+    .layout002 {
+                border: 1px solid;
+                margin: 10px;
+                padding: 10px;
+                }
+
+    .box002 {
+            background-color: bisque;
+            padding: 40px;
+            }
+
+    /* 부모의 가상선택자를 채우는 것 _ 외워라(가로정렬이 필요한 곳에 쓰임) */
+    .box002::after {
+                    content: '';
+                    display: block;
+                    clear: both;
+                    }
+
+    .box002 li {
+                border: 1px solid #000;
+                padding: 10px;
+                margin: 2px;
+                float: left;
+                }
+
+    .box002 li:nth-child(5) {
+                            float: right;
+                            }
+
+    .box002 li:nth-child(4) {
+                            float: right;
+                            }
+
+    /* flex 속성 */
+    .box003 {
+            background-color: bisque;
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column-reverse;
+            }
+
+    .box003 li {
+                border: 1px solid #000;
+                padding: 10px;
+                margin: 2px;
+                }

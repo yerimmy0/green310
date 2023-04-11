@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 글자속성</title>
+    <!-- 외부스타일 연결 -->
+    <link rel="stylesheet" href="css/font_style.css">
+</head>
+<body>
+    <h1>CSS 글자속성</h1>
+    <p>글자에 관련된 속성은 글꼴, 글자 크기, 글자 굵기, 기울임, 줄간격, 대소문자, 글자 속성 등 주된 7가지를 필수적으로 알고 있어야 한다.</p>
+
+    <strong>color를 제외한 나머지 6가지 속성은 한 줄 쓰기가 가능하다.</strong>
+    <table border="1">
+<tr>
+    <td>속성명</td>
+    <td>속성값 종류</td>
+    <td>설명(사용하는 방식)</td>
+</tr>
+<tr>
+    <td>font-family</td>
+    <td class="font001">내 컴퓨터에 등록되어 있는 폰트 / 웹폰트 활용 가능</td>
+    <td>글꼴을 인용부호에 감싼다.<br>
+        다국적 사용자를 위한 페이지로 사용할 시 대체 폰트의 의미로 serif(꺾임이 있는 서체 ex_명조체, 궁서체) / sans-serif(꺾임이 없는 서체 ex_고딕체) 를 작성한다.</td>
+</tr>
+<tr>
+    <td>font-size</td>
+    <td class="font002">단위를 여러개 적용할 수 있으며 16px, 1em 등으로 기본 값이 설정되어 있다.</td>
+    <td>숫자로 기입 시 필수적으로 단위와 함께 적용하고, 기본 크기를 기반으로 대략적인 비율을 형성하여 small, large 등으로 기재가 가능하다.</td>
+</tr>
+<tr>
+    <td>font-style</td>
+    <td class="font003">italic(이텔릭체_기울어짐) / normal(기본체)</td>
+    <td>글자의 기울기를 지정 / 기본값이 기울어져 있는 태그의 경우 설정 값 변경으로 사용 가능하다.</td>
+</tr>
+<tr>
+    <td>font-variant</td>
+    <td class="font004">글자 속성의 변형으로 <span>small-caps</span> / normal</td>
+    <td>작은 대문자로 변경하거나 일반형으로 작성한다. 그 외 변형은 추가 속성에서 설명할 예정이다.</td>
+</tr>
+<tr>
+    <td>font-weight</td>
+    <td class="font005">글자의 무게감(두께감)을 표현하며 bold / normal로 쓰거나 숫자 400-normal, 600-bold로 쓴다.</td>
+    <td>글자의 두께를 지정한다.<br>
+        서체에 따라 적용하며 숫자는 다를 수 있다.</td>
+</tr>
+<tr>
+    <td>line-height</td>
+    <td class="font006">기본값이 1.4 (140%)이며 <br>단위는 없다.</td>
+    <td class="font007">br로 설정된 강제 줄바꿈을 포함하며 위아래 글씨 사이 설정한다.<br> 작성하지 않을 시 기본값을 적용한다.</td>
+</tr>
+    </table>
+    <p>위의 모든 속성은 font 속성 하나로 일렬쓰기가 가능하다.</p>
+    <p>font : <span class="font008">font-weight, font-style, font-variant</span>
+            <span class="font009">font-size/line-height</span>
+            <span class="font010">font-family</span></p>
+
+    <strong>font-size와 font-family를 필수적으로 작성하여야 일렬작성을 할 수 있으며<br>
+        맨 앞 그룹인 꾸밈 속성의 순서는 상관이 없다.</strong>
+
+    <h3>글자추가 속성</h3>
+    <p>주로 글자나 단어보다는 문장에서 많이 사용된다.</p>
+    <ul>
+        <li>text-aline 
+            <ul>
+                <li>특징 : 글씨를 정렬한다.</li>
+                <li>종류 : center, right, left, justify(양쪽 정렬)</li>
+                <li>주의사항 : block, inline-block 요소에서만 사용가능하다.</li>
+                <li>justify : 양쪽 정렬로 내용 안에서 공간이 정해져 있고 두 줄 이상의 글씨에서만 적용이 된다.</li>
+            </ul>
+        </li>
+        <li>text-decoration
+            <ul>
+                <li>종류
+                    <ul>
+                        <li>none - 제거</li>
+                <li>underline - 밑줄</li>
+                <li>line-through - 취소선(가운데선)</li>
+                <li>overline - 윗줄</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>text-transform 
+            <ul>
+                <li>특징 : 글자의 형태를 변형하는 유형으로 font-variant의 확장형 개념으로 보면 된다.</li>
+                <li>종류
+                    <ul>  
+                        <li>uppercase - 모두 대문자 변경</li>
+                        <li>lowercase - 모두 소문자 변경</li>
+                        <li>capitalize - 문장의 첫 글자만 대문자 변경</li>
+                    </ul>
+                </li>
+                <li>text-indent 
+                    <ul>
+                        <li>특징 - 문단의 첫 머리를 들여쓰기 또는 밀어쓰기하는 기능이다.</li>
+                        <li>주의사항 - block 또는 inline-block에 사용가능하다.</li>
+                        <li>주요 사용처 - 대체 텍스트를 사용해야 할 시 마이너스 값을 활용하여 화면에서 벗어나게 사용한다.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>letter-spacing : 글자와 글자 간격 설정, 글씨 사이에 박스를 넣어준다는 개념으로 숫자와 단위로 설정하며 마이너스 값도 적용가능하다.</li>
+    </ul>
+
+    <h4>예제 작성</h4>
+    <div class="aline">
+        <p>Lorem ipsum dolor sit amet,</p>
+        <p>consectetur adipisicing elit.</p>
+        <p>Rerum doloribus doloremque</p>
+        <p>quo possimus quaerat officia, enim asperiores minus sunt expedita nam consectetur hic aliquid molestiae fugit ex et facere! Itaque.</p>
+    </div>
+
+    <div class="deco">
+        <p>된 별 이 쉬이 있습니다. 별 옥 가을로 없이 다하지 이름을 나의 우는 다 듯합니다. 너무나 하나에 이네들은 가슴속에 자랑처럼 무덤 패, 있습니다. 이웃 이름과 오면 덮어 있습니다.</p>
+        <p>청춘이 차 많은 나는 토끼, 봅니다. 노새, 어머니, 흙으로 나는 슬퍼하는 별에도 북간도에 걱정도 같이 계십니다.</p>
+        <p>무엇인지 이름을 경, 멀듯이, 계십니다. 차 이런 이름자를 가을 어머니, 언덕 피어나듯이 덮어 계십니다. 불러 시인의 자랑처럼 까닭입니다. 패, 벌써 것은 별 가슴속에 있습니다.</p>
+        <p>청춘이 못 토끼, 멀리 프랑시스 계십니다. 다하지 아이들의 별 비둘기, 봅니다. 말 내 위에도 때 다하지 가을 릴케 하나 거외다. 밤을 나의 노새, 듯합니다.</p>
+    </div>
+
+    <div class="trans">
+    <p>Lorem ipsum dolor sit amet,</p>
+    <p>consectetur adipisicing elit.</p>
+    <p>Rerum doloribus doloremque</p>
+    </div>
+
+        <div class="indent">
+            <p><span>Lorem ipsum</span> dolor sit amet consectetur, adipisicing elit. Velit magnam consectetur earum, eos libero est vel eveniet voluptate molestias, aspernatur commodi recusandae cum labore nam quasi laudantium exercitationem voluptates sequi?</p>
+            <p><span>Lorem ipsum</span> dolor sit amet consectetur, adipisicing elit. Velit magnam consectetur earum, eos libero est vel eveniet voluptate molestias, aspernatur commodi recusandae cum labore nam quasi laudantium exercitationem voluptates sequi?</p>
+            <p><span>Lorem ipsum</span> dolor sit amet consectetur, adipisicing elit. Velit magnam consectetur earum, eos libero est vel eveniet voluptate molestias, aspernatur commodi recusandae cum labore nam quasi laudantium exercitationem voluptates sequi?</p>
+        </div>
+</body>
+</html>
