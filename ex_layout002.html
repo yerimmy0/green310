@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout연습 002</title>
+</head>
+<body>
+    <section>
+        <article>box1</article>
+        <article>box2</article>
+        <article>box3</article>
+        <article>box4</article>
+        <article>box5</article>
+        <article>box6</article>
+        <article>box7</article>
+        <article>box8</article>
+        <article>box9</article>
+        <article>box10</article>
+        <article>box11</article>
+        <article>box12</article>
+    </section>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            }
+
+            section {
+                    display: flex;
+                    flex-wrap: wrap;
+                    }
+
+        article {
+                height: 300px;
+                font-size: 50px;
+                text-align: center;
+                }
+
+/* order의 숫자가 높을수록 밑으로 떨어짐 */
+        article:nth-child(1) {
+                                background-color: #ddd;
+                                width: 60%;
+                                order: 3;
+                            }
+        article:nth-child(2) {
+                                background-color: #ccc;
+                                width: 40%;
+                                order: 2;
+                            }
+        article:nth-child(3) {
+                                background-color: #bbb;
+                                width: 55%;
+                                order: 5;
+                            }
+        article:nth-child(4) {
+                                background-color: #aaa;
+                                width: 45%;
+                                order: 4;
+                            }
+        article:nth-child(5) {
+                                background-color: #999;
+                                width: 35%;
+                                order: 1;
+                            }
+        article:nth-child(6) {
+                                background-color: #888;
+                                width: 35%;
+                                order: -2;
+                            }
+        article:nth-child(7) {
+                                background-color: #777;
+                                width: 40%;
+                                order: -5;
+                            }
+        article:nth-child(8) {
+                                background-color: #666;
+                                width: 30%;
+                                order: -5;
+                            }
+        article:nth-child(9) {
+                                background-color: #555;
+                                width: 30%;
+                                order: -3;
+                            }
+        article:nth-child(10) {
+                                background-color: #444;
+                                width: 30%;
+                                order: -1;
+                            }
+        article:nth-child(11) {
+                                background-color: #333;
+                                width: 55%;
+                                order: 6;
+                            }
+        article:nth-child(12) {
+                                background-color: #222;
+                                width: 45%;
+                                order: 6;
+                            }
+    </style>
+
+</body>
+</html>
