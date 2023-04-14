@@ -53,8 +53,8 @@
         <li><b>items</b> : 자식요소를 부르는 명칭이다.</li>
     </ul><br>
 
-    <p>Container 속성 - <b>display</b>, flex-flow(묶음기능), flex-derection(수평/수직을 표현), <b>justify-content</b>(아이템 수평 정렬 시 사용), <b>aline-item</b>(아이템 수직 정렬 시 사용)</p>
-    <p>items 속성 - flex, grow(증가너비), shrink(감소너비), basis(크기배분), align-self(각자조정)</p>
+    <p><b>Container 속성</b> - <b>display</b>, flex-flow(묶음기능), flex-derection(수평/수직을 표현), <b>justify-content</b>(아이템 수평 정렬 시 사용), <b>aline-item</b>(아이템 수직 정렬 시 사용)</p>
+    <p><b>items 속성</b> - flex, grow(증가너비), shrink(감소너비), basis(크기배분), align-self(각자조정)</p>
     <p>자손자에만 오롯이 적용되며 후손자에는 적용이 되지 않는다.</p>
 
     <ul class="box003">
@@ -64,6 +64,45 @@
         <li>menu4</li>
         <li>menu5</li>
     </ul><br>
+
+    <h2>positon (요소를 자유롭게 배치하는 레이아웃)</h2>
+    <p>
+        여러 요소를 순서와 상관없이 화면에 가로 세로 좌표값을 기준으로 배치한다.<br>
+        특정 영역 안에서 위치 조절을 자유롭게 할 수 있어 유연한 레이아웃이 가능하다.
+    </p>
+    
+    <ul class="layout004">
+        <li><b>relative</b> : 적용된 요소의 현재 위치값을 기준으로 상대 위치를 지정한다. (기준값_부모요소에 주로 사용하며 또는 겹쳐져 있는 아이들을 z-index값을 적용할 때 사용)</li>
+        <li><b>absolute</b> : 부모 요소의 특정 구간을 기준으로 절대 위치를 지정한다.(움직이는 요소)<br>
+        부모요소에 relative를 지정하지 않을 경우 window(화면)를 기준으로 움직인다.
+        </li>
+        <li><b>fixed</b> : 웹 브라우저를 기준으로 절대 위치를 지정한다. (화면기준으로 보임)</li>
+    </ul>
+
+    <div class="box004">
+        <p>relative</p>
+        <p>absolute</p>
+        <p>fixed</p>
+    </div>
+
+    <div class="box005">
+        <p>position1</p>
+        <p><span>position2</span></p>
+        <p>position3</p>
+    </div>
+
+    <br>
+    <h3>z-index 속성</h3>
+    <p>
+        position을 사용한 요소끼리의 겹쳐져 있는 순서를 제어할 수 있다.<br>
+        값이 클수록 위로 올라온다.
+    </p>
+
+    <div class="box006">
+        <p>box1</p>
+        <p>box2</p>
+        <p>box3</p>
+    </div>
 
 </body>
 </html>

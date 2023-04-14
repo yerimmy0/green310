@@ -1,27 +1,31 @@
 /* 유니코드 설정 */
 @charset 'utf-8';
 
+
     /* 전체설정 */
     * {
         margin: 0;
         padding: 0;
-    }
-    ul , ol {
-            list-style: none;
-            }
-    a {
+        }
+
+body {height: 3000px;}
+
+ul , ol {
+        list-style: none;
+        }
+a {
         text-decoration: none;
         color: #000;
-    }
+}
 
     /* 가시속성 예제 */
-    .layout001 {
+.layout001 {
                 border: 1px solid;
                 margin: 10px;
                 padding: 10px;
                 }
         /* padding은 네모칸 안에 글자들과 공간을 띄움 / margin은 벽과 공간을 띄움 */
-    .layout001 li {
+.layout001 li {
                 border-bottom: 5px solid rgb(243, 173, 243);
                 margin-bottom: 5px;
                 background-image: linear-gradient(90deg, #bbbbbb 50%, #ff74e8 0);
@@ -30,64 +34,167 @@
                 padding-left: 10px;
                 }
 
-    .box001 {
-            background-color: bisque;
-            padding: 40px;
-            }
-    .box001 span {
+.box001 {
+        background-color: bisque;
+        padding: 40px;
+        }
+.box001 span {
                 border: 2px solid #000;
                 padding: 20px;
-            }
-    /* span 띄어쓰기 한칸으로 인식해 공간이 띄어져 있음 즉, 띄어쓰기 안하면 상자끼리 붙음 */
-    .box001 span:nth-child(1) {display: inline;}
-    .box001 span:nth-child(2) {display: inline-block;}
-    .box001 span:nth-child(3) {display: block;}
+        }
+/* span 띄어쓰기 한칸으로 인식해 공간이 띄어져 있음 즉, 띄어쓰기 안하면 상자끼리 붙음 */
+.box001 span:nth-child(1) {display: inline;}
+.box001 span:nth-child(2) {display: inline-block;}
+.box001 span:nth-child(3) {display: block;}
 
-    /* float 속성 */
-    .layout002 {
+/* float 속성 */
+.layout002 {
                 border: 1px solid;
                 margin: 10px;
                 padding: 10px;
                 }
 
-    .box002 {
-            background-color: bisque;
-            padding: 40px;
-            }
+.box002 {
+        background-color: bisque;
+        padding: 40px;
+        }
 
-    /* 부모의 가상선택자를 채우는 것 _ 외워라(가로정렬이 필요한 곳에 쓰임) */
-    .box002::after {
-                    content: '';
-                    display: block;
-                    clear: both;
-                    }
+/* 부모의 가상선택자를 채우는 것 _ 외워라(가로정렬이 필요한 곳에 쓰임) */
+.box002::after {
+                content: '';
+                display: block;
+                clear: both;
+                }
 
-    .box002 li {
+.box002 li {
                 border: 1px solid #000;
                 padding: 10px;
                 margin: 2px;
                 float: left;
                 }
 
-    .box002 li:nth-child(5) {
-                            float: right;
-                            }
+.box002 li:nth-child(5) {
+                        float: right;
+                        }
 
-    .box002 li:nth-child(4) {
-                            float: right;
-                            }
+.box002 li:nth-child(4) {
+                        float: right;
+                        }
 
     /* flex 속성 */
-    .box003 {
-            background-color: bisque;
-            padding: 40px;
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column-reverse;
-            }
+.box003 {
+        background-color: bisque;
+        padding: 40px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        }
 
-    .box003 li {
+.box003 li {
                 border: 1px solid #000;
                 padding: 10px;
                 margin: 2px;
                 }
+
+/* layout 네모박스 만들기 */
+.layout004 {
+        border: 1px solid;
+        margin: 10px;
+        padding: 10px;
+        }
+
+/* position 예제 */
+.box004 {
+        background-color: bisque;
+        display: flex;
+        height: 200px;
+        position: relative;
+        }
+.box004 p {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #000;
+        }
+.box004 p:nth-child(1) {position: relative;}
+.box004 p:nth-child(2) {
+                        position: absolute;
+                        left: 200px;
+                        top: 0;
+                        }
+.box004 p:nth-child(3) {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        z-index: 99;
+                        }
+
+.box005 {
+        background-color: bisque;
+        height: 500px;
+        margin-top: 20px;
+        position: relative;
+        }
+.box005 p:nth-child(1) {
+                        width: 200px;
+                        height: 200px;
+                        background-color: pink;
+                        position: absolute;
+                        left: 50%; /* 왼쪽에서 50%보냈지만 정확한 가운데로 오지 않음 */
+                        margin-left: -100px; /* 화면 가운데로 보내기 */
+                        top: 50%;
+                        margin-top: -100px;
+                        }
+.box005 p:nth-child(2) {
+                        position: absolute;
+                        width: 200px;
+                        height: 200px;
+                        background-color: skyblue;
+                        right: 50px;
+                        bottom: 50px;
+                        }
+.box005 p:nth-child(2) span {
+                        position: absolute;
+                        left: 70px;
+                        top: 90px;
+                        }
+.box005 p:nth-child(3) {
+                        width: 200px;
+                        height: 200px;
+                        background-color: rgb(219, 197, 255);
+                        position: fixed;
+                        bottom: 0;
+                        right: 0;
+                        }
+
+/* z-index 예제 */
+.box006 {
+        width: 400px;
+        height: 400px;
+        background-color: bisque;
+        position: relative;
+        }
+.box006 p:nth-child(1) {
+                        width: 200px;
+                        height: 200px;
+                        background-color: rgb(210, 255, 143);
+                        position: absolute;
+                        z-index: 4;
+                        }
+.box006 p:nth-child(2) {
+                        width: 200px;
+                        height: 200px;
+                        background-color: rgb(253, 255, 143);
+                        position: absolute;
+                        left: 50px;
+                        top: 50px;
+                        }
+.box006 p:nth-child(3) {
+                        width: 200px;
+                        height: 200px;
+                        background-color: rgb(253, 182, 135);
+                        position: absolute;
+                        left: 100px;
+                        top: 100px;
+                        z-index: -1; /* -1은 부모자 뒤로 내려간다. (-2는 없음) */
+                        }
+
