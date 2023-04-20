@@ -1,0 +1,134 @@
+@charset 'utf-8';
+/* 전체설정 */
+*   {
+    margin: 0;
+    padding: 0;
+    }
+ul.ol {list-style: none;}
+a   {
+    text-decoration: none;
+    color: #000;
+    }
+
+/* 레이아웃설정 */
+/* 높이값 설정은 내부에 자료를 삽입하기 시작하면 삭제한다. */
+.boxA {height: 200px;}
+.boxB {height: 800px;}
+/* .boxC {height: 1200px;} */
+.boxD {height: 300px;}
+.box4 {height: 20%;}
+.box5 {height: 60%;}
+.box6 {height: 20%;}
+
+/* header 설정 */
+.boxA   {display: flex;}
+.box1   {
+        width: 20%;
+        height: 100%;
+        }
+.box2   {
+        width: 80%;
+        height: 100%;
+        }
+
+/* hero 설정 */
+.box3   {
+        height: 100%;
+        width: 60%;
+        margin: auto;
+        }
+
+/* contents 설정 (값을 정해둔 경우 추후 삭제해야함으로 상단에 같이 배치함) */
+/* 
+.box4 {height: 20%;}
+.box5 {height: 60%;}
+.box6 {height: 20%;} 
+*/
+
+/* 와이어프레임 작업 */
+/* header 추가설정 */
+.gnb    {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        }
+.util   {
+        width: 300px;
+        height: 80px;
+        background-color: beige;
+        position: absolute;
+        right: 0;
+        top: 0;
+        }
+
+.menu   {
+        width: 100%;
+        height: 100px;
+        background-color: antiquewhite;
+        }
+
+/* hero 추가설정 */
+.slogun {position: relative;}
+.txtBox {
+        width: 100%;
+        height: 400px;
+        background-color: pink;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -200px;
+        }
+
+.slideBtn   {
+            width: 150px;
+            height: 50px;
+            background-color: rgb(255, 160, 255);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-left: -75px;
+            }
+
+/* contents 추가설정 */
+.info_up    {
+            display: flex;
+            justify-content: space-between;
+            }
+.info_img   {
+            width: 20%;
+            height: 200px;
+            background-color: paleturquoise;
+            }
+.info_txt   {
+            width: 75%;
+            height: 200px;
+            background-color: skyblue;
+            }
+
+.gallery    {
+            width: 100%;
+            height: 300px;
+            background-color: rgb(255, 212, 192);
+            }
+.notice {
+        height: 150px;
+        background-color: rgb(252, 185, 147);
+        }
+.res    {
+        height: 450px;
+        background-color: rgb(250, 173, 111);
+        }
+
+.info_bottom    {
+                display: flex;
+                height: 300px;
+                }
+.map    {
+        height: 100%;
+        width: 80%;
+        background-color: rgb(179, 255, 179);
+        }
+.map_info   {
+            width: 20%;
+            background-color: rgb(121, 255, 121);
+            }

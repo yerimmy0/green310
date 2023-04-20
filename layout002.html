@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout002</title>
+    <link rel="stylesheet" href="css/grid-guide.css">
+</head>
+<body>
+    
+        <div class="box001">박스1</div>
+
+    <div class="boxH">
+        <div class="box002">박스2-1</div>
+        <div class="box003">박스2-2</div>
+    </div>
+
+        <div class="box004">박스3</div>
+
+    <div class="boxA">
+            <div class="box005">박스4-1</div>
+            <div class="box006">박스4-2</div>
+            <div class="box007">박스4-3</div>
+
+        </div>
+
+    <style>
+        .boxH {display: flex;}
+        .box002 {width: 50%;}
+        .box003 {width: 50%;}
+
+        .boxA {display: flex;}
+        .box005 {width: 20%;}
+        .box006 {width: 60%;}
+        .box007 {width: 20%;}
+    </style>
+</body>
+</html>
+
+<!-- 
+    div*4.box 상태에서 enter누름
+    <div class="boxA">박스1</div>
+    <div class="boxB">
+        div*2.box2-${박스2-$}에서 enter 누르면
+        <div class="box2-1">박스2-1</div>
+        <div class="box2-2">박스2-2</div>
+    </div>
+    <div class="boxC">박스3</div>
+    <div class="boxD">박스4</div>
+
+        <style>
+            /* 박스 B 설정 */
+            /* 부모자 after 정렬방식 float:left 활용 */
+            .boxB::after {
+                        content: "";
+                        display: block;
+                        clear:both;
+                        }
+            .box2-1 {
+                    float: left;
+                    width: 50%;
+                    }
+
+            /* 박스D 설정 */
+            .boxD::after {
+                        content: "";
+                        display:block;
+                        clear: both;
+                        }
+            .box4-1 {
+                    float: left;
+                    width: 20%;
+                    }
+            .box4-2 {
+                    float: left;
+                    width: 60%;
+                    }
+            .box4-3 {
+                    float: left;
+                    width: 20%;
+                    }
+    </div>
+
+    /* 부모자에 flex방식 */
+
+    /* 박스B 설정 */
+    .boxB {display: flex;}
+    .boxB div {flex-grow: 1;}
+
+    /* 박스D 설정 */
+    .boxD {display: flex;}
+    .box4-1 {width; 20%;}
+    .box4-2 {width; 60%;}
+    .box4-3 {width; 20%;}
+ -->

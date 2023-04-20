@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout005</title>
+    <link rel="stylesheet" href="css/grid-guide.css">
+</head>
+<body>
+    <div class="boxA">
+
+        <div class="boxA-1">
+            <div class="boxA-2">box1</div>
+            <div class="boxA-3">box2</div>
+            <div class="boxA-4">box3</div>
+            <div class="boxA-5">box4</div>
+            </div>
+    
+        <div class="boxA-6">box5</div>
+    </div>
+    <div class="boxB">box6</div>
+    <div class="boxC">
+        <div class="boxC-1">box7</div>
+        <div class="boxC-2">box8</div>
+        <div class="boxC-3">box9</div>
+        <div class="boxC-4">box10</div>
+    </div>
+    <div class="boxD">
+        <div class="boxD-1">box11</div>
+        <div class="boxD-2">box12</div>
+        <div class="boxD-3">box13</div>
+    </div>
+
+    <style>
+        .boxA {
+                display: flex;
+                align-items: flex-start;
+                }
+        .boxA-1 {width: 30%;}
+        .boxA-6 {width: 70%;}
+
+        .boxC {display: flex;}
+        .boxC-1 {width: 25%;}
+        .boxC-2 {width: 25%;}
+        .boxC-3 {width: 25%;}
+        .boxC-4 {width: 25%;}
+
+        .boxD {display: flex;}
+        .boxD div {flex-grow: 1;}
+    </style>
+
+    <!-- <link rel="stylesheet" href="css/grid-guide.css">
+    <div class="boxA"></div>
+        <div class="boxA-1">
+            
+        </div>
+        <div class="boxA-2">box5</div>
+    <div class="boxB">box6</div>
+    <div class="boxC">box7</div>
+        <div class="boxC-1">box8</div>
+        <div class="boxC-2">box9</div>
+        <div class="boxC-3">box10</div>
+        <div class="boxC-4">box11</div>
+    <div class="boxD">
+        <div class="divD-1">box12</div>
+        <div class="divD-2">box13</div>
+        <div class="divD-3">box14</div>
+    </div>
+
+    <style>
+        /* flex기반 가로정렬 */
+        /* 박스A 설정 */
+
+        /* .boxA {
+                display: flex;
+                align-items: flex-start;
+                }
+        .boxA-1 {width: 30%;}
+        .boxA-2 {width: 70%;} */
+
+        /* 박스C 설정 */
+        /* .boxC {display: flex;}
+        .boxC div {flex-grow: 1;} */
+
+        /* 박스D 설정 */
+        /* .boxD {display: flex;}
+        .boxD div {flex-grow: 1;} */
+    </style>  -->
+
+
+</body>
+</html>

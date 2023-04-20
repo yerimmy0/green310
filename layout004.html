@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout004</title>
+    <link rel="stylesheet" href="css/grid-guide.css">
+</head>
+<body>
+    <div class="boxA">
+        <div class="boxA-1">로고</div>
+        <div class="boxA-2">메뉴</div>
+    </div>
+    <div class="boxB">이미지슬라이드</div>
+    <div class="boxC">
+        <div class="boxC-1">공지사항</div>
+        <div class="boxC-2">배너</div>
+        <div class="boxC-3">바로가기</div>
+    </div>
+    <div class="boxD">
+        <div class="boxD-1">하단로고</div>
+
+            <div class="boxD-2">
+                <div class="boxd-1">하단메뉴</div>
+                <div class="boxd-2">Copyright</div>
+            </div>
+
+    </div>
+
+    <style>
+    /* 
+        flex 설정
+
+        .boxA {display: flex;}
+        .boxA-1 {width: 20%;}
+        .boxA-2 {width: 80%;}
+
+        .boxC {display: flex;}
+        .boxC div{flex-grow: 1;}
+
+        .boxD {display: flex;}
+        .boxD-1 {width: 20%;}
+        .boxD-2 {width: 80%;} 
+    */
+
+    /* 부모자 after정렬 float:left 사용 */
+    
+    /* 박스 A 설정 */
+    .boxA::after {
+                content: "";
+                display: block;
+                clear: both;
+                }
+    .boxA-1 {
+            float: left;
+            width: 20%;
+            }
+    .boxA-2 {
+            float: left;
+            width: 80%;
+            }
+
+/* 박스 C 설정 */
+    .boxC::after {
+                content: "";
+                display: block;
+                clear: both;
+                }
+    .boxC div {
+            float: left;
+            width: 33.3333%;
+            }
+
+/* 박스 D 설정 */
+    .boxD {height: 460px;}
+    .boxD::after {
+                content: "";
+                display: block;
+                clear: both;
+                }
+    .boxD-1 {
+            float: left;
+            width: 20%;
+            height: 100%;
+            }
+    .boxD-2 {
+            float: left;
+            width: 80%;
+            height: 100%;
+            }
+
+    </style>
+</body>
+</html>
