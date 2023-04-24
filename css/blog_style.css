@@ -1,0 +1,106 @@
+@charset 'utf-8';
+
+/* 전체설정 */
+*   {
+    margin: 0;
+    padding: 0;
+    }
+ul,ol {list-style: none;}
+a   {
+    text-decoration: none;
+    color: #000;
+    }
+
+body {font-family: '맑은고딕', 'Apple SD Gothic Neo', sans-serif;}
+
+/* 박스3과 박스4의 정렬 */
+.boxA {display: flex;}
+.box3 {width: 70%;}
+.box4 {width: 30%;}
+
+/* 로고설정 */
+.logo {}
+.logo h1    {
+            font-weight: bold;
+            font-size: 30px;
+            }
+.logo h1 a {}
+
+/* 메뉴설정 */
+.menu {}
+.menu ul {display: flex;}
+.menu ul li {}
+.menu ul li a   {
+                display: block;
+                padding: 5px;
+                font-size: 14px;
+                }
+.menu ul li a:hover {background-color: #eee;}
+
+/* 기사설정 */
+.story {}
+.story h1   {
+            font-size: 36px;
+            margin-bottom: 20px;
+            }
+.story img  {
+            max-width: 100%;
+            }
+.story p {margin-bottom: 20px;}
+
+/* 특집기사 설정 */
+.sidemenu {margin-bottom: 30px;}
+.sidemenu h1    {
+                font-weight: bold;
+                font-size: 18px;
+                color: #666;
+                border-bottom: dotted 2px #ddd;
+                margin-bottom: 10px;
+                }
+.sidemenu ul {}
+.sidemenu ul li {}
+.sidemenu ul li a   {
+                    display: block;
+                    padding: 5px;
+                    font-size: 14px;
+                    }
+
+/* 추천기사 설정 */
+.recommend {margin-bottom: 30px;}
+.recommend h1    {
+                font-weight: bold;
+                font-size: 18px;
+                color: #666;
+                border-bottom: dotted 2px #ddd;
+                margin-bottom: 10px;
+                }
+.recommend ul {}
+.recommend ul li {}
+.recommend ul li a   {
+                    display: block;
+                    padding: 5px;
+                    font-size: 14px;
+                    }
+
+/* 인기기사 설정 */
+.popular {}
+.popular h1    {
+                font-weight: bold;
+                font-size: 18px;
+                color: #666;
+                border-bottom: dotted 2px #ddd;
+                margin-bottom: 10px;
+                }
+.popular ul {}
+.popular ul li {}
+.popular ul li a   {
+                    display: block;
+                    padding: 5px;
+                    font-size: 14px;
+                    }
+
+/* 카피라이트 */
+.copyright  {
+            font-size: 14px;
+            color: #666;
+            }
