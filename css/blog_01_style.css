@@ -1,0 +1,122 @@
+@charset 'utf-8';
+
+/* 전체설정 */
+*   {
+    margin: 0;
+    padding: 0;
+    }
+ul,ol {list-style: none;}
+a   {
+    text-decoration: none;
+    color: #000;
+    }
+
+    
+/* 박스3과 박스4 옆으로 만들기 */
+.boxA {display: flex;}
+.box3 {width: 70%;}
+.box4 {width: 30%;}
+
+/* 로고설정 */
+.logo h1    {
+            font-weight: bold;
+            font-size: 30px;
+            padding: 10px;
+            }
+
+/* 메뉴설정 */
+.menu ul {display: flex;}
+.menu ul li a   {
+                display: block;
+                padding: 10px;
+                font-size: 14px;
+                }
+.menu ul li a:hover {background-color: #75dbe7;}
+
+/* 기사설정 */
+.story h1   {
+            margin-bottom: 15px;
+            margin-top: 30px;
+            }
+.story img {max-width: 100%;}
+.story p    {
+            padding-top: 20px;
+            padding-bottom: 10px;
+            }
+.story h2   {
+            font-weight: normal;
+            margin-top: 40px;
+            border-left: 10px solid #7cbac1;
+            padding-left: 10px;
+            }
+.box3 {padding-bottom: 20px;}
+
+/* 특집기사설정 */
+.box4 {margin-top: 40px;}
+.sidemenu {margin-bottom: 30px;}
+.sidemenu h1    {
+                font-size: 20px;
+                color: #666;
+                font-weight: bold;
+                border-bottom: dotted 2px #ddd;
+                margin-bottom: 15px;
+                }
+.sidemenu ul li a   {
+                    display: block;
+                    padding: 5px;
+                    font-size: 14px;
+                    }
+
+/* 추천기사설정 */
+.recommend {margin-bottom: 30px;}
+.recommend h1   {
+                font-size: 20px;
+                color: #666;
+                font-weight: bold;
+                border-bottom: dotted 2px #ddd;
+                margin-bottom: 15px;
+                }
+.recommend ul li a  {
+                    display: block;
+                    padding: 5px;
+                    font-size: 14px;
+                    }
+
+/* 인기기사설정 */
+.popular {margin-bottom: 30px;}
+.popular h1    {
+                font-size: 20px;
+                color: #666;
+                font-weight: bold;
+                border-bottom: dotted 2px #ddd;
+                margin-bottom: 15px;
+                }
+.popular ul li a   {
+                    display: block;
+                    padding: 5px;
+                    font-size: 14px;
+                    }
+
+/* 카피라이트설정 */
+.copyright  {
+            font-size: 14px;
+            color: #666;
+            }
+
+/* 박스3과 박스4 사이 떨어뜨리기 */
+.box3 {padding-right: 30px;}
+
+/* 메뉴 배경색 넣기 */
+.box2 {background-color: #7cbac1;}
+
+/* 카피라이트 위에 선 넣기 */
+.box5   {
+        border-top: 1px solid #ddd;
+        padding: 10px;
+        }
+
+/* 화면 가운데 배치 */
+.box1, .menu, .boxA, .copyright {
+                                width: 1000px;
+                                margin: 0 auto;
+                                }
