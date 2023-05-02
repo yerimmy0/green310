@@ -1,4 +1,5 @@
 @charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 
 /* 전체설정 */
 *   {
@@ -10,7 +11,7 @@ a   {
     text-decoration: none;
     color: #000;
     }
-
+    body {font-family: '맑은고딕', 'Apple SD Gothic Neo', sans-serif;}
     
 /* 박스3과 박스4 옆으로 만들기 */
 .boxA {display: flex;}
@@ -22,7 +23,9 @@ a   {
             font-weight: bold;
             font-size: 30px;
             padding: 10px;
+            font-family: 'Paytone One', sans-serif;
             }
+.logo a {color: #83a4a8;}
 
 /* 메뉴설정 */
 .menu ul {display: flex;}
@@ -34,6 +37,10 @@ a   {
 .menu ul li a:hover {background-color: #75dbe7;}
 
 /* 기사설정 */
+.box3   {
+        padding-top: 40px;
+        padding-bottom: 20px;
+}
 .story h1   {
             margin-bottom: 15px;
             margin-top: 30px;
@@ -49,7 +56,50 @@ a   {
             border-left: 10px solid #7cbac1;
             padding-left: 10px;
             }
-.box3 {padding-bottom: 20px;}
+.storyinfo  {
+            margin-top: -10px;
+            margin-bottom: 10px;
+            }
+.storyinfo i    {
+                color: #aaa;
+                font-size: 18px;
+                }
+
+/* sns공유설정 */
+.snsSet {margin-top: 40px;}
+.snsSet ul {display: flex;}
+.snsSet ul li   {
+                width: 33.3333%;
+                }
+.snsSet ul li a {
+                display: block;
+                padding: 5px;
+                text-align: center;
+                font-size: 14px;
+                color: #fff;
+                }
+.snsSet ul li:nth-child(1) a {background-color: #1da1f2;}
+.snsSet ul li:nth-child(2) a {background-color: #1877f2;}
+.snsSet ul li:nth-child(3) a {/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#833ab4+0,f77737+100 */
+                                background: #833ab4; /* Old browsers */
+                                background: -moz-linear-gradient(left,  #833ab4 0%, #f77737 100%); /* FF3.6-15 */
+                                background: -webkit-linear-gradient(left,  #833ab4 0%,#f77737 100%); /* Chrome10-25,Safari5.1-6 */
+                                background: linear-gradient(to right,  #833ab4 0%,#f77737 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#833ab4', endColorstr='#f77737',GradientType=1 ); /* IE6-9 */
+                            }
+
+/* 기사의 카테고리 설정 */
+.story-cat {margin-bottom: 25px;}
+.story-cat ul   {display: flex;}
+.story-cat li {margin-right: 5px;}
+.story-cat a    {
+                background-color: #75dbe7;
+                display: block;
+                color: #fff;
+                padding: 3px 5px;
+                font-size: 12px;
+                border-radius: 2px;
+                }
 
 /* 특집기사설정 */
 .box4 {margin-top: 40px;}
@@ -66,6 +116,10 @@ a   {
                     padding: 5px;
                     font-size: 14px;
                     }
+.sidemenu i {
+            color: #888;
+            margin-right: 5px;
+        }
 
 /* 추천기사설정 */
 .recommend {margin-bottom: 30px;}
@@ -76,11 +130,26 @@ a   {
                 border-bottom: dotted 2px #ddd;
                 margin-bottom: 15px;
                 }
+.recommend li {margin-bottom: 10px;}
 .recommend ul li a  {
                     display: block;
-                    padding: 5px;
                     font-size: 14px;
+                    position: relative;
                     }
+.recommend img  {
+                width: 100%;
+                vertical-align: top;
+                }
+.recommend .txt {
+                background-color: rgba(0, 0, 0, 0.8);
+                color: #fff;
+                padding: 5px 10px;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                box-sizing: border-box;
+                }
 
 /* 인기기사설정 */
 .popular {margin-bottom: 30px;}
@@ -96,6 +165,20 @@ a   {
                     padding: 5px;
                     font-size: 14px;
                     }
+.popular a::after   {
+                    content: "";
+                    display: block;
+                    clear: both;
+                    }
+.popular img    {
+                border: none;
+                float: left;
+                width: 60px;}
+.popular .txt   {
+                float: none; /* 이해안되면 left, right 해보면 이해됨 */
+                width: auto;
+                padding-left: 75px;
+                }
 
 /* 카피라이트설정 */
 .copyright  {

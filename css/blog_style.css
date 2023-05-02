@@ -1,30 +1,31 @@
 @charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 
 /* 전체설정 */
-*   {
-    margin: 0;
-    padding: 0;
-    }
+*       {
+        margin: 0;
+        padding: 0;
+        }
 ul,ol {list-style: none;}
-a   {
-    text-decoration: none;
-    color: #000;
-    }
+a       {
+        text-decoration: none;
+        color: #000;
+        }
+img     {
+        border: none;
+        vertical-align: bottom;
+        }
 
 body {font-family: '맑은고딕', 'Apple SD Gothic Neo', sans-serif;}
 
-/* 박스3과 박스4의 정렬 */
-.boxA {display: flex;}
-.box3 {width: 70%;}
-.box4 {width: 30%;}
-
 /* 로고설정 */
 .logo {}
-.logo h1    {
-            font-weight: bold;
-            font-size: 30px;
-            }
-.logo h1 a {}
+.logo h1{
+        font-weight: normal;
+        font-size: 30px;
+        font-family: 'Paytone One', sans-serif;
+        }
+.logo h1 a {color: #83a4a8;}
 
 /* 메뉴설정 */
 .menu {}
@@ -39,28 +40,102 @@ body {font-family: '맑은고딕', 'Apple SD Gothic Neo', sans-serif;}
 
 /* 기사설정 */
 .story {}
-.story h1   {
-            font-size: 36px;
-            margin-bottom: 20px;
-            }
-.story img  {
-            max-width: 100%;
-            }
-.story p    {
-            margin-bottom: 20px;
-            margin-top: 10px;
-            }
-.story h2   {
-            margin-top: 40px;
-            border-left: 10px solid #7cbac1;
-            padding-left: 10px;
-            font-weight: normal;
-            }
+.story h1       {
+                font-size: 36px;
+                margin-bottom: 20px;
+                }
+.story img      {
+                max-width: 100%;
+                }
+.story p        {
+                margin-bottom: 20px;
+                margin-top: 10px;
+                }
+.story h2       {
+                margin-top: 40px;
+                border-left: 10px solid #7cbac1;
+                padding-left: 10px;
+                font-weight: normal;
+                }
+
+/* 기사의 작성일 설정 */
+.storyinfo      {
+                margin-top: -10px;
+                margin-bottom: 10px;
+                }
+.storyinfo i    {
+                color: #aaa;
+                font-size: 18px;
+                }
+.storyinfo time {}
+
+/* 기사의 카테고리 설정*/
+.story-cat {margin-bottom: 25px;}
+.story-cat ul {display: flex;}
+.story-cat ul li {margin-right: 5px;}
+.story-cat ul li a      {
+                        background-color: #75dbe7;
+                        font-size: 12px;
+                        color: #fff;
+                        padding: 3px 5px;
+                        display: block;
+                        border-radius: 2px;
+                        }
+
+/* sns공유설정 */
+.snsSet {
+        margin-top: 40px;
+        }
+.snsSet ul      {
+                display: flex;
+                }
+.snsSet ul li   {
+                flex-grow: 1;
+                width: 33.3333%;
+                }
+.snsSet ul li a {
+                display: block;
+                text-align: center;
+                padding: 5px;
+                font-size: 14px;
+                color: #fff;
+                }
+.snsSet li:nth-child(1) a {background-color: #1da1f2;}
+.snsSet li:nth-child(2) a {background-color: #1877f2;}
+.snsSet li:nth-child(3) a {/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#833ab4+0,f77737+100 */
+        background: #833ab4; /* Old browsers */
+        background: -moz-linear-gradient(left,  #833ab4 0%, #f77737 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left,  #833ab4 0%,#f77737 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right,  #833ab4 0%,#f77737 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#833ab4', endColorstr='#f77737',GradientType=1 ); /* IE6-9 */
+        }
+
+/* 관련기사 설정 */
+.relation       {
+                background-color: #f0f0d4;
+                padding: 20px;
+                margin-top: 40px;
+                }
+.relation h1    {
+                color: #727224;
+                font-size: 20px;
+                font-weight: normal;
+                margin-bottom: 5px;
+                }
+.relation ul {display: flex;}
+.relation ul li {width: 25%;}
+.relation ul li a       {
+                        display: block;
+                        padding: 5px;
+                        font-size: 14px;
+                        }
+.relation img {width: 100%;} /* 꼭 설정해줘야만 모바일에서 사진이 안깨짐 */
+.relation .txt {max-width: 100%;}
 
 /* 특집기사 설정 */
-.sidemenu   {
-            margin-bottom: 30px;
-            }
+.sidemenu       {
+                margin-bottom: 30px;
+                }
 .sidemenu h1    {
                 font-weight: bold;
                 font-size: 18px;
@@ -70,16 +145,20 @@ body {font-family: '맑은고딕', 'Apple SD Gothic Neo', sans-serif;}
                 }
 .sidemenu ul {}
 .sidemenu ul li {}
-.sidemenu ul li a   {
-                    display: block;
-                    padding: 5px;
-                    font-size: 14px;
-                    }
+.sidemenu ul li a       {
+                        display: block;
+                        padding: 5px;
+                        font-size: 14px;
+                        }
+.sidemenu i     {
+                color: #888;
+                margin-right: 5px;
+                }
 
 /* 추천기사 설정 */
-.recommend  {
-            margin-bottom: 30px;
-            }
+.recommend      {
+                margin-bottom: 30px;
+                }
 .recommend h1   {
                 font-weight: bold;
                 font-size: 18px;
@@ -88,12 +167,26 @@ body {font-family: '맑은고딕', 'Apple SD Gothic Neo', sans-serif;}
                 margin-bottom: 10px;
                 }
 .recommend ul {}
-.recommend ul li {}
-.recommend ul li a   {
-                    display: block;
-                    padding: 5px;
-                    font-size: 14px;
-                    }
+.recommend ul li {margin-bottom: 10px;}
+.recommend ul li a      {
+                        display: block;
+                        font-size: 14px;
+                        position: relative;
+                        }
+.recommend img  {
+                width: 100%;
+                vertical-align: top;
+                }
+.recommend .txt {
+                background-color: rgba(0, 0, 0, 0.8);
+                color: #fff;
+                padding: 5px 10px;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                box-sizing: border-box;
+                }
 
 /* 인기기사 설정 */
 .popular {}
@@ -106,17 +199,41 @@ body {font-family: '맑은고딕', 'Apple SD Gothic Neo', sans-serif;}
                 }
 .popular ul {}
 .popular ul li {}
-.popular ul li a   {
-                    display: block;
-                    padding: 5px;
-                    font-size: 14px;
-                    }
+.popular ul li a        {
+                        display: block;
+                        padding: 5px;
+                        font-size: 14px;
+                        border-bottom: dotted 1px #ddd;
+                        color: #2288bb;
+                        }
+.popular a::after       {
+                        content: "";
+                        display: block;
+                        clear: both;
+                        }
+.popular img    {
+                border: none;
+                float: left;
+                width: 60px;
+                }
+.popular .txt   {
+                float: none; 
+                width: auto;
+                padding-left: 15px;
+                margin-left: 60px;
+                }
+.popular span   {
+                color: #666;
+                font-size: 12px;
+                display: block; /* 밑으로 글씨가 내려옴 */
+                
+                }
 
 /* 카피라이트 */
-.copyright  {
-            font-size: 14px;
-            color: #666;
-            }
+.copyright      {
+                font-size: 14px;
+                color: #666;
+                }
 
 /* 박스2(메뉴)를 바 형태로 디자인하기 */
 .box2 {background-color: #7cbac1;}
@@ -142,12 +259,54 @@ body {font-family: '맑은고딕', 'Apple SD Gothic Neo', sans-serif;}
         padding-bottom: 15px;
         }
 
-/* 박스3번과 박스4번의 좌우 간격설정 */
-.box3 {margin-right: 50px;} 
-/* flex가 아닌 float를 사용했을 때 꼭 넣어줘야함 {box-sizing:border-box;} */
+/* 박스의 왼쪽, 오른쪽 공백확보 */
+.box1, .boxA, .copyright        {
+                                padding-left: 10px;
+                                padding-right: 10px;
+                                }
 
-/* 화면에 크기 설정 및 가운데 배치 */
-.box1,.boxA,.menu,.copyright  {
-                width: 1000px;
-                margin: 0 auto
-                }
+/* 미디어쿼리구간설정//////////////////////////////////////////////////////////////////////////////////////// */
+
+/* 1. 모바일구간 : 599px이하구간/////////////////////////////////////////////////////////////*/
+@media (max-width: 599px)       {
+                                /* css설정구간 */
+                                }
+
+/* 2. 모바일 ~ 태블릿 사이구간  : 600px ~ 767px구간////////////////////////////////////////*/
+@media (min-width: 600px) and (max-width: 767px)        {
+                                                        /* css설정구간 */
+
+                                                        /* 박스4-1과 박스4-2의 가로정렬 */
+                                                        .box4 {display: flex;}
+                                                        .box4-1 {width: 50%;}
+                                                        .box4-2 {width: 50%;}
+                                                        }
+
+/* 3. 태블릿 ~ 데스크탑구간 : 768px이상구간///////////////////////////////////////////// */
+@media (min-width: 768px)       {
+                                /* css설정구간 */
+
+                                /* 박스3과 박스4의 정렬 */
+                                .boxA   {
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        }
+                                .box3 {width: 70%;}
+                                .box4 {width: 30%;}
+
+                                /* 박스3번과 박스4번의 좌우 간격설정 */
+                                .box3   {
+                                        padding-right: 50px;
+                                        box-sizing: border-box;
+                                        } 
+                                /* flex가 아닌 float를 사용했을 때 꼭 넣어줘야함 {box-sizing:border-box;} */
+                                }
+
+/* 4. 일정크기 가로값 변동 없는 구간 : 1040px이상 구간/////////////////////////////////*/
+@media (min-width: 1040px)      {
+                                /* 화면에 크기 설정 및 가운데 배치 */
+                                .box1,.boxA,.menu,.copyright    {
+                                                                width: 1000px;
+                                                                margin: 0 auto
+                                                                }
+                                }

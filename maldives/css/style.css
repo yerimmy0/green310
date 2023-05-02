@@ -1,0 +1,33 @@
+@charset 'utf-8';
+
+header {background-color: #fff;}
+header h1   {
+            position: absolute;
+            width: 180px;  /* 사진 크기가 180*136임 */
+            height: 136px;
+            background-image: url(../img/logo1.png);
+            text-indent: -9999px;  /* logo라는 글자 사라져라 */
+            top: 70px;
+            left: 50%;
+            margin-left: -90px;
+            background-size: contain; /* 여기에 붙어 있어라 */
+            background-repeat: no-repeat; /* 반복하지마라 */
+            }
+
+.gnb {
+    position: absolute;
+    top: 300px;
+    left: 40px;
+    }
+
+.sunSet {
+        position: absolute;
+        bottom: 50px;
+        width: 90px;
+        height: 47px;
+        left: 50%;
+        margin-left: -45px;
+}
+.snsSet a   {
+    float: left;
+    }

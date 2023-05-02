@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형웹설정</title>
+</head>
+<body>
+    <h1>반응형웹을 위한 설정</h1>
+    <p>반응형웹은 웹페이지 하나로 데스크탑, 테블릿, 스마트폰에 맞게 디자인이 자동으로 반응해서 변경되는 웹페이지를 의미한다.</p>
+    <p><Strong>반응형 웹페이지는 미디어쿼리를 사용해서 개발한다.</Strong></p>
+
+    <h2>미디어 쿼리란?</h2>
+    <p>웹페이지에 표시되는 장치에 <b>@media</b> 라는 스타일시트 작업을 통해 구간을 설정하고 각 구간별 제시되는 속성값을 사용하게 됨을 의미한다.</p>
+
+    <p> <b>min-width</b> : 숫자px는 최소 가로값을 의미하여 지정된 숫자보다 가로값이 커지는 경우를 나타낸다.<br>
+        <b>max-width</b> : 숫자px는 최대 가로값을 의미하여 지정된 숫자보다 가로값이 작아지는 경우를 나타낸다.<br>
+        사이구간을 나타낼 시 <b>'min'</b>과 <b>'max'</b>값 사이에 <b>'and'</b>를 사용한다.<br>
+        <em><b>'and'</b> 앞과 뒤에는 띄어쓰기를 필수!!</em>
+
+        <ul>
+            <li>
+                <b>모바일구간</b><br>
+                - 600px이하 구간을 모두 다 모바일구간으로 보고 375px이하는 추가설정한다.
+            </li>
+            <li>
+                <b>태블릿구간</b><br>
+                - 600이상 768px이하 구간으로 설정하거나 601px이상부터 1024px이하 구간으로 설정한다.
+            </li>
+            <li>
+                <b>데스크탑구간</b><br>
+                - 1025px이상 구간부터 설정하되 네이버처럼 일정구간이 되었을 때는 더이상 크기가 커지지 않게 가로값을 지정한다.
+            </li>
+        </ul>
+    </p>
+
+    <style>
+        body {background-color: skyblue;}
+        @media (max-width: 600px)   {
+                                    body {background-color: pink;}
+                                    }
+
+        @media (min-width: 601px) and (max-width: 700px)    {
+                                                            body {background-color: palegoldenrod;}
+                                                            }
+
+        @media (max-width: 600px)   {
+                                    h1 {font-size: 40px;}
+                                    }
+
+        @media (min-width: 601px) and (max-width: 700px)    {
+                                                            h1 {font-size: 60px;}
+                                                            }
+    </style>
+
+</body>
+</html>
