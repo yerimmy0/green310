@@ -122,7 +122,10 @@ body {font-family: '맑은고딕', 'Apple SD Gothic Neo', sans-serif;}
                 font-weight: normal;
                 margin-bottom: 5px;
                 }
-.relation ul {display: flex;}
+.relation ul    {
+                display: flex;
+                flex-wrap: wrap;
+                }
 .relation ul li {width: 25%;}
 .relation ul li a       {
                         display: block;
@@ -130,7 +133,7 @@ body {font-family: '맑은고딕', 'Apple SD Gothic Neo', sans-serif;}
                         font-size: 14px;
                         }
 .relation img {width: 100%;} /* 꼭 설정해줘야만 모바일에서 사진이 안깨짐 */
-.relation .txt {max-width: 100%;}
+.relation .txt {}
 
 /* 특집기사 설정 */
 .sidemenu       {
@@ -270,17 +273,26 @@ body {font-family: '맑은고딕', 'Apple SD Gothic Neo', sans-serif;}
 /* 1. 모바일구간 : 599px이하구간/////////////////////////////////////////////////////////////*/
 @media (max-width: 599px)       {
                                 /* css설정구간 */
+
+                                /* snsSet 설정 */
+                                .snsSet span    {
+                                                text-indent: -99999px; /* 사라져도 괜찮을 때는 display: none; 사용하기 */
+                                                display: inline-block; /* text-indent 는 블럭에게만 쓸 수 있음 */
+                                                }
+
+                                /* 관련기사 설정 */
+                                .relation ul li {width: 50%;}
                                 }
 
 /* 2. 모바일 ~ 태블릿 사이구간  : 600px ~ 767px구간////////////////////////////////////////*/
-@media (min-width: 600px) and (max-width: 767px)        {
+@media (min-width: 600px) and (max-width: 767px) {
                                                         /* css설정구간 */
 
                                                         /* 박스4-1과 박스4-2의 가로정렬 */
                                                         .box4 {display: flex;}
                                                         .box4-1 {width: 50%;}
                                                         .box4-2 {width: 50%;}
-                                                        }
+                                                }
 
 /* 3. 태블릿 ~ 데스크탑구간 : 768px이상구간///////////////////////////////////////////// */
 @media (min-width: 768px)       {
