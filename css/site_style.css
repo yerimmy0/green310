@@ -23,26 +23,26 @@ body {font-family: '맑은고딕', 'Apple SD Gothic Neo', sans-serif;}
 /* 로고설정 */
 .logo {}
 .logo a {}
-.logo img   {
-            width: 250px;
-            height: 33px;
-            }
+.logo img       {
+                width: 250px;
+                height: 33px;
+                }
 .logo a:hover {}
 
 /* html태그 안에 인라인방식 CSS를 직접기재하여 우선순위로 크기를 조절하게 만들어둔다. */
 
 /* 메뉴설정 */
-.menu   {}
+.menu   {display: block;}
 .menu ul {}
 .menu li {}
 .menu li a  {
-            display: block;
-            padding: 10px 15px;
-            font-size: 14px;
-            }
-.menu li a:hover    {
-                    background-color: #eee;
-                    }
+                display: block;
+                padding: 10px 15px;
+                font-size: 14px;
+                }
+.menu li a:hover        {
+                        background-color: #eee;
+                        }
 
 /* header 그림 */
 .topimg {
@@ -61,11 +61,11 @@ body {font-family: '맑은고딕', 'Apple SD Gothic Neo', sans-serif;}
                 }
 .notice li a:hover {}
 
-.notice a::after    {
-                    content: "";
-                    display: block;
-                    clear: both;
-                    }
+.notice a::after        {
+                        content: "";
+                        display: block;
+                        clear: both;
+                        }
 .notice span    {
                 float: left;
                 width: 60px;
@@ -79,6 +79,35 @@ body {font-family: '맑은고딕', 'Apple SD Gothic Neo', sans-serif;}
 
 /* snsSet설정 */
 .snsSet {}
+.snsSet p       {
+                background-color: #ddd;
+                font-size: 14px;
+                text-align: center;
+                padding: 10px;
+                margin-bottom: 20px;
+                }
+
+/* 말풍선 모양을 제작할 때 사용하는 제너레이터 */
+/* http://cssarrowplease.com */
+.snsSet p {
+	position: relative;
+	background: #ddd;
+        }
+.snsSet p:after {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(221, 221, 221, 0);
+	border-top-color: #ddd;
+	border-width: 15px;
+	margin-left: -15px;
+}
+
 .snsSet ul {}
 .snsSet li {}
 .snsSet li a    {
@@ -88,15 +117,48 @@ body {font-family: '맑은고딕', 'Apple SD Gothic Neo', sans-serif;}
                 font-size: 14px;
                 background-color: #eee;
                 border-radius: 4px;
+                color: #fff;
                 }
+.snsSet i {margin-right: 10px;}
 
-.snsSet li a:hover {}
+.snsSet li:nth-child(1) a {background-color: #1da1f2;}
+.snsSet li:nth-child(2) a {background-color: #1877f2;}
+.snsSet li:nth-child(3) a {background-color: #c13584;}
 
 /* 카피라이트 설정 */
 .copyright {}
 .copyright p    {
                 color: #666;
                 font-size: 14px;
+                }
+
+/* summary설정 */
+.summary {}
+.summary a      {
+                display: block;
+                background-color: #222;
+                color: #fff;
+                text-align: center;
+                }
+.summary a i    {
+                font-size: 38px;
+                display: block;
+                padding-top: 40px;
+                padding-bottom: 40px;
+                }
+.fa-database {background-color: #bfbd13;}
+.fa-bar-chart {background-color: #c58839;}
+.fa-clock-o {background-color: #859f46;}
+.summary h2     {
+                font-size: 20px;
+                font-weight: normal;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                }
+.summary p      {
+                background-color: #524e3c;
+                padding-top: 15px;
+                padding-bottom: 15px;
                 }
 
 /* 박스5를 바형태로 디자인하기 */
@@ -114,65 +176,93 @@ body {font-family: '맑은고딕', 'Apple SD Gothic Neo', sans-serif;}
         padding-top: 20px;
         padding-bottom: 20px;
         }
-.box6   {
-        padding-top: 20px;
-}
+.notice {padding-bottom: 10px;}
+.box6   {padding-top: 20px;}
+.box6-1, .box6-2, .box6-3 {padding-bottom: 10px;}
 
 /* 박스 왼쪽 오른쪽 설정 */
-.boxA, .box4, .box5 {
-                    padding-left: 15px;
-                    padding-right: 15px;
-                    }
+.boxA, .box4, .box5     {
+                        padding-left: 15px;
+                        padding-right: 15px;
+                        }
 
 /* 미디어쿼리구간 설정////////////////////////////////////////////////// */
 
 /* 1. 599px 이하 구간 설정 */
 @media (max-width: 599px) {
-    
+        
 
 }
 
-/* 2. 768px이상 구간 설정//////////////////////////// */
+
+
+/* 2. 767px 이하 구간 설정 */
+@media (max-width: 767px) {
+
+        /* 메뉴토글설정 */
+        .menu {display: none;}
+        .menuBtn        {
+                        position: absolute;
+                        right: 15px;
+                        top: 15px;
+                        padding: 6px 12px;
+                        border: solid 1px #aaa;
+                        border-radius: 5px;
+                        background-color: #fff;
+                        }
+        .menuBtn i      {
+                        color: #888;
+                        font-size: 18px;
+                        }
+        
+}
+
+
+
+/* 3. 768px이상 구간 설정//////////////////////////// */
 
 @media (min-width: 768px) {
 
-    /* 박스1과 박스2의 가로설정 */
-    .boxA   {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            }
-    .boxA>div {}
+        /* 박스1과 박스2의 가로설정 */
+        .boxA   {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                }
+        .boxA>div {}
 
-    /* 메뉴설정 */
-    .menu   {}
-    .menu ul {display: flex;}
-    .menu li {}
-    .menu li a {}
-    .menu li a:hover {}
+        /* 메뉴설정 */
+        .menuBtn {display: none;}
+        .menu   {}
+        .menu ul {display: flex;}
+        .menu li {}
+        .menu li a {}
+        .menu li a:hover {}
 
-    /* 공지사항, snsSet 가로정렬 */
-    .box4 {display: flex;}
-    .box4>div:nth-child(1) {
-                            width: 70%;
-                            padding-right: 35px;
-                            box-sizing: border-box;
-                            }
-    .box4>div:nth-child(2) {width: 30%;}
+        /* 공지사항, snsSet 가로정렬 */
+        .box4 {display: flex;}
+        .box4>div:nth-child(1)  {
+                                width: 70%;
+                                padding-right: 35px;
+                                box-sizing: border-box;
+                                }
+        .box4>div:nth-child(2) {width: 30%;}
 
-    /* 박스6-1, 6-2, 6-3의 가로정렬 */
-    .box6 {display: flex;}
-    .box6>div {width: 32%;}
-    .box6-1, .box6-2 {margin-right: 2%;}
+        /* 박스6-1, 6-2, 6-3의 가로정렬 */
+        .box6 {display: flex;}
+        .box6>div {width: 32%;}
+        .box6-1, .box6-2 {margin-right: 2%;}
 
 }
 
-/* 3. 1190px 이상일 때//////////////////////////// */
+
+
+/* 4. 1190px 이상일 때//////////////////////////// */
 @media (min-width: 1190px) {
 
-    /* 레이아웃에 전체너비를 고정하고 가운데 배치함 */
-    .boxA, .box3, .box4, .copyright, .box6  {
-                                            width: 1140px;
-                                            margin: 0 auto;
-                                            }
+        /* 레이아웃에 전체너비를 고정하고 가운데 배치함 */
+        .boxA, .box3, .box4, .copyright, .box6  {
+                                                width: 1140px;
+                                                margin: 0 auto;
+                                                }
 }
