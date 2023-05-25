@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트_반복문</title>
+</head>
+<body>
+    <h1>자바스크립트_반복문</h1>
+    <p>조건식을 만족하는 동안 실행문을 반복적으로 수행한다.</p>
+    <ul>
+        <li>
+            while문<br>
+            - 작성법 -<br>
+            var a = 시작값;<br>
+            while(조건식){<br>
+                실행문; <br>
+                증감식; (시작값의 변수이름 뒤에 ++/-- 둘 중 하나)<br>
+            }
+        </li>
+        <li>
+            For문 - while문과 반복문이라는 점은 같으나 비교적 간단한 기술방식으로 사용빈도수가 높다.<br>
+            - 작성법 -<br>
+            for(var a=시작값; 조건식; 증감식;){<br>
+                실행문<br>
+            }
+        </li>
+    </ul>
+
+    <script>
+        var a=0;
+            while(a<5){
+                console.log(a)
+                // 증감식; (시작값의 변수이름 뒤에 ++/-- 둘 중 하나)
+                a++;
+            }
+            
+            for(var b=0; b<5; b++){
+                console.log(b)
+            }
+    </script>
+
+    <h2>예제만들기</h2>
+    <p>구구단 2단 만들기</p>
+    <!-- 
+        2x1=2
+        2x2=4
+        2x3=6
+        2x4=8
+        2x5=10
+        2x6=12
+        2x7=14
+        2x8=16
+        2x9=18
+    -->
+    
+    <script>
+        // 반복문만들기
+        for(var tt=1; tt<10; tt++){
+            document.write('2x'+tt+'='+2*tt+'<br>')
+        // '2x'+tt+'='+2*tt -> '외부언어'+'변수'+'외부언어'='변수연산'
+        }
+
+        
+        // while문을 통한 반복문
+        // var num1=2;
+        // while(num1<10){
+        //     document.write('<h2>'+num1+'단</h2>')
+        //     var num2 = 1;
+        //     while(num2<10){
+        //         document.write(num1+'x'+num2+'='+num1*num2+'<br>')
+        //         num2++;
+        //     }
+        //     num1++;
+        // }
+
+        // For문을 통한 반복문
+        for(var num1=2; num1<10; num1++){
+            document.write('<h1>'+num1+'단'+'</h1>')
+            for(var num2=1; num2<10; num2++){
+                document.write(num1+'x'+num2+'='+num1*num2+'<br>')
+            }
+        }
+    </script>
+
+
+
+    </script>
+</body>
+</html>
