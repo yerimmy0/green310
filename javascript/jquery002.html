@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리_수치값찾기</title>
+</head>
+<body>
+    <h1>제이쿼리_수치값찾기</h1>
+    <p>제이쿼리의 메서드를 이용하여 요소의 크기, 위치(절대값/상대값), 윈도우의 스크롤값, 마우스의 좌표값 등을 찾아내고 수정할 수 있다.</p>
+    <h4>크기값</h4>
+    <ul>
+        <li>width() : '가로값을 찾아라' 또는 '(괄호)안에 숫자를 넣어 해당 숫자로 변경하여라'로 쓰인다.</li>
+        <li>height() : '세로값을 찾아라' 또는 '(괄호)안에 숫자를 넣어 해당 숫자로 변경하여라'로 쓰인다.</li>
+    </ul>
+    <h4>위치값</h4>
+    <p>
+        문서 끝에서부터 선택자가 위치하는 y축의 거리를 나타낸다.<br>
+        .offset().top
+    </p>
+
+    <style>
+        *   {
+            margin: 0;
+            padding: 0;
+            }
+        ul  {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            width: 800px;
+            height: 120px;
+            background-color: pink;
+            }
+    </style>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function(){
+                                    let wd = $('ul').width(),
+                                    wwd = $(window).width(),
+                                    ht = $(window).height(),
+                                    os = $('ul').offset().top
+                                    console.log(os);
+                                    console.log(ht)
+                                    console.log(ht-os);
+                                    
+
+                                    $('ul').width(wwd);
+                                    $('ul').height(ht-os)
+                                    })
+    </script>
+</body>
+</html>
