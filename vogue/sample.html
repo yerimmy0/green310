@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트랜스폼_3D</title>
+</head>
+
+<body>
+    <h1>transform_3D</h1>
+    <p>
+        2D에서 3D로 변환시 가장 중요한 속성은 원금감이다.<br>
+        원근감 : perspective
+    </p>
+    <p>
+        사용법<br>
+        : 부모자의 원근값 수치 작성(단위포함 - perspective : 수치px)
+    </p>
+    <p>
+        주의사항<br>
+        : 수치가 작을수록 왜곡이 커지며 수치가 클수록 왜곡이 적어진다.
+    </p>
+
+    <h2>예제</h2>
+    <section>
+        <div>
+            <p></p>
+        </div>
+        <div>
+            <p></p>
+        </div>
+        <div>
+            <p></p>
+        </div>
+    </section>
+
+    <section>
+        <article>
+            <p></p>
+            <p></p>
+        </article>
+    </section>
+
+    <section>
+        <span>
+            <p></p>
+            <p></p>
+        </span>
+    </section>
+
+    <style>
+        section {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: space-around;
+                margin-bottom: 50px;
+                }
+        section div {
+                    width: 200px;
+                    height: 200px;
+                    border: 1px solid #000;
+                    }
+        section div:nth-child(1){
+                                perspective: 150px;
+                                }
+        section div:nth-child(3){
+                                perspective: 800px;
+                                }
+        section div p   {
+                        margin: 0;
+                        padding: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: pink;
+                        opacity: 0.5;
+                        transform: rotateY(50deg);
+                        }
+
+        section article {
+                        width: 800px;
+                        height: 600px;
+                        border: 1px solid #000;
+                        display: flex;
+                        perspective: 200px;
+                        }
+        section article p   {
+                            width: 400px;
+                            height: 100%;
+                            background-color: paleturquoise;
+                            opacity: 0.8;
+                            margin: 0;
+                            transition: all 0.8s;
+                            }
+        section article p:nth-child(1){transform-origin: left top;}
+        section article p:nth-child(2){transform-origin: right top;}
+        section article:hover p:nth-child(1){transform: rotateY(60deg);}
+        section article:hover p:nth-child(2){transform: rotateY(-60deg);}
+
+        section span {
+                    width: 800px;
+                    height: 600px;
+                    border: 1px solid #000;
+                    perspective: 700px;
+                    background-color: beige;
+                    }
+        section span p  {
+                        width: 800px;
+                        height: 50%;
+                        background-color: palevioletred;
+                        opacity: 0.8;
+                        margin: 0;
+                        transition: all 0.8s;
+                        }
+        section span p:nth-child(1){transform-origin: top;}
+        section span p:nth-child(2){transform-origin: bottom;}
+        section span:hover p:nth-child(1) {transform: rotateX(60deg);}
+        section span:hover p:nth-child(2) {transform: rotateX(-60deg);}
+    </style>
+</body>
+</html>
