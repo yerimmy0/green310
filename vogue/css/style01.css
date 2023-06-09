@@ -1,0 +1,46 @@
+@charset 'utf-8';
+/* 전체설정 */
+* {
+    margin: 0;
+    padding: 0;
+}
+ul,ol {list-style: none;}
+a {text-decoration: none;
+color: #000;}
+img {vertical-align: bottom;}
+
+/* 전체화면설정 */
+#wrap   {
+        width: 100%;
+        height: 100%;
+        min-width: 1024px;
+        min-height: 768px;
+        position: fixed;
+        background-color: skyblue;
+        left: 0;
+        top: 0;
+        }
+
+/* 메뉴버튼설정 */
+#wrap em {
+        width: 50px;
+        height: 50px;
+        background-color: plum;
+        position: fixed;
+        left: 40px;
+        top: 40px;
+        z-index: 999;
+        }
+
+/* nav설정 */
+#wrap nav {
+            position: fixed;
+            height: 100%;
+            background-color: gainsboro;
+            width: 150px;
+            left: 0;
+            top: 0;
+            z-index: 10;
+            transform: rotateY(100deg);
+            transform-origin: left;
+}

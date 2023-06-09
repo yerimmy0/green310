@@ -209,3 +209,32 @@ section p:nth-child(2) b    {
 .side:hover p:nth-child(1){left: 50px;}
 .side:hover p:nth-child(2){left: 50px;}
 .side:hover p:nth-child(3){left: 50px;}
+
+/* 자동롤링버튼설정 */
+.btn {
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+    color: #b9fb05;
+    transform: skewX(40deg);
+    width: 150px;
+    height: 50px;
+    }
+.btn i {font-size: 60px;
+position: absolute;
+right: 0;}
+
+.btn i:nth-child(1){animation: ani 1.5s linear infinite;}
+/* {animation: ani 1.5s 0.5s linear infinite;}
+    animation : 키프레임이름 지속시간 지연시간 가속도 반복*/
+.btn i:nth-child(2){}
+.btn i:nth-child(3){}
+
+@keyframes ani {
+    0% {right: 0;
+        transform: scale(1);
+    opacity: 1;}
+    100% {right: 100px;
+    transform: scale(1.5);
+opacity: 0;}
+}

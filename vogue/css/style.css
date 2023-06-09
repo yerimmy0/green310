@@ -1,0 +1,325 @@
+@charset 'utf-8';
+/* 전체설정 */
+*   {
+    margin: 0;
+    padding: 0;
+    }
+ul,ol {list-style: none;}
+a   {
+    text-decoration: none;
+    color: #000;
+    }
+img {
+    border: none;
+    vertical-align: bottom;
+    }
+
+/* 전체화면설정 */
+#wrap {
+    width: 100%;
+    /* 레이아웃이 틀어짐을 방지하고 일정넓이와 높이 이하로는 콘텐츠가 줄어들지 않도록 설정하기 위해 최소값을 정해준다. */
+    min-width: 1024px;
+    min-height: 768px;
+    height: 100%;
+    position: fixed;
+    background-color: gray;
+    left: 0;
+    top: 0;
+    perspective: 900px;
+    }
+
+/* 메뉴버튼설정 */
+#wrap em {
+        width: 50px;
+        height: 50px;
+        background-color: #fff;
+        position: fixed;
+        left: 40px;
+        top: 50px;
+        z-index: 999;
+        display: inline-block;
+        animation: ani 0.5s infinite alternate;
+        }
+
+/* 메뉴버튼 움직이게 설정하기 */
+@keyframes ani  {
+                0%  {
+                    transform: scale(1);
+                    background-color: #fff;
+                    opacity: 1;
+                    }
+                100% {
+                    transform: scale(1.5);
+                    background-color: #888;
+                    opacity: 0.8;
+                    }
+                }
+
+/* nav설정 */
+#wrap nav {
+        position: fixed;
+        height: 100%;
+        width: 150px;
+        background-color: #eee;
+        left: 0;
+        top: 0;
+        z-index: 10;
+        transition: all 0.8s;
+        transform: rotateY(120deg);
+        transform-origin: left; /* 끝을 붙잡고 움직임-transform-origin */
+        opacity: 0;
+        }
+#wrap nav h1 {
+            position: absolute;
+            width: 100px;
+            left: 50%;
+            margin-left: -50px;
+            top: 80px;
+            }
+#wrap nav h1 img{width: 100%;}
+#wrap .gnb {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 35%;
+            }
+#wrap .gnb li {
+                text-align: center;
+                padding: 20px 0;
+                cursor: pointer;
+                }
+#wrap .gnb li:hover{
+                    background-color: #000;
+                    color: #fff;
+                    }
+
+/* section설정 */
+#wrap section {
+                width: 100%;    
+                height: 100%;
+                position: fixed;
+                background-color: skyblue;
+                z-index: 1;
+                transform-origin: right;
+                transition: all 0.5s;
+                }
+
+/* 변환모습 */
+#wrap nav.on {
+            transform: rotateY(15deg);
+            opacity: 1;
+            }
+#wrap section.on {
+                transform: rotateY(-10deg);
+                }
+#wrap section>div   {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    opacity: 0;
+                    z-index: 1;
+                    perspective: 700px;
+                    transition: all 1.5s;
+                    }
+#wrap section>div.on {
+                    opacity: 1;
+                    z-index: 2;
+                    }
+
+/* 박스설정 */
+#wrap section>div>p {
+                    transition: all 1.5s;
+                    transform: rotateY(180deg);
+                    box-sizing: border-box;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden;
+                    }
+#wrap section>div>p strong  {
+                            display: block;
+                            font-size: 50px;
+                            color: #fff;
+                            }
+#wrap section>div>p span {
+                        display: block;
+                        font-size: 20px;
+                        color: #eee;
+                        }
+#wrap section>div.on>p  {transform: rotateY(0deg);}
+
+/* homme박스 설정 */
+.homme>p {
+        float: left;
+        width: 25%;
+        height: 25%;
+        }
+.homme>p:nth-child(1)   {
+                        background-color: #ddd;
+                        width: 50%;
+                        }
+.homme>p:nth-child(2)   {
+                        background-color: #ccc;
+                        background-image: url(../img/m1.jpg);
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center top;
+                        }
+.homme>p:nth-child(3){background-color: #bbb;}
+.homme>p:nth-child(4) {
+                        background-color: #aaa;
+                        float: right;
+                        width: 50%;
+                        height: 50%;
+                        background-image: url(../img/m2.jpg);
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center top;
+                        }
+.homme>p:nth-child(5) {
+                        background-color: #fff;
+                        float: right;
+                        background-image: url(../img/m3.jpg);
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: left center;
+                        }
+.homme>p:nth-child(6) {
+                        background-color: #888;
+                        float: right;
+                        }
+.homme>p:nth-child(7) {
+                        background-color: #777;
+                        float: right;
+                        }
+.homme>p:nth-child(8) {
+                        background-color: #666;
+                        float: right;
+                        background-image: url(../img/m4.jpg);
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        }
+.homme>p:nth-child(9) {background-color: #555;}
+.homme>p:nth-child(10) {
+                        background-color: #444;
+                        width: 50%;
+                        background-image: url(../img/m5.jpg);
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        }
+.homme>p:nth-child(11) {background-color: #333;}
+
+/* girl박스 설정 */
+.girl>p {
+        float: left;
+        width: 25%;
+        height: 25%;
+        }
+.girl>p:nth-child(1){background-color: #ddd;}
+.girl>p:nth-child(2){
+                    background-color: #ccc;
+                    background-image: url(../img/w1.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    }
+.girl>p:nth-child(3){
+                    background-color: #bbb;
+                    width: 50%;
+                    }
+.girl>p:nth-child(4){
+                    background-color: #aaa;
+                    height: 50%;
+                    background-image: url(../img/w2.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center top;
+                    }
+.girl>p:nth-child(5){
+                    background-color: #999;
+                    width: 50%;
+                    height: 50%;
+                    background-image: url(../img/w3.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    }
+.girl>p:nth-child(6){
+                    background-color: #fff;
+                    background-image: url(../img/w4.jpg);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    }
+.girl>p:nth-child(7){background-color: #777;}
+.girl>p:nth-child(8){
+                    background-color: #666;
+                    background-image: url(../img/w5.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    }
+.girl>p:nth-child(9){background-color: #555;}
+.girl>p:nth-child(10){
+                    background-color: #444;
+                    background-image: url(../img/w6.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    }
+.girl>p:nth-child(11){
+                    background-color: #333;
+                    background-image: url(../img/w7.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    }
+
+
+/* kids박스 설정 */
+.kids>p {
+    float: left;
+    width: 25%;
+    height: 25%;
+    }
+.kids>p:nth-child(1){
+                    background-color: #ddd;
+                    width: 50%;
+                    height: 100%;
+                    background-image: url(../img/k1.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center top;
+                    }
+.kids>p:nth-child(2){background-color: #ccc;}
+.kids>p:nth-child(3){
+                    background-color: #bbb;
+                    background-image: url(../img/k2.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    }
+.kids>p:nth-child(4){
+                    background-color: #aaa;
+                    width: 50%;
+                    }
+.kids>p:nth-child(5){
+                    background-color: #999;
+                    height: 50%;
+                    background-image: url(../img/k3.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center top;
+                    }
+.kids>p:nth-child(6){background-color: #888;}
+.kids>p:nth-child(7){
+                    background-color: #777;
+                    background-image: url(../img/k4.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    }
